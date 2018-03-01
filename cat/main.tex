@@ -1,0 +1,76 @@
+\documentclass[oneside, 11pt]{article}
+\renewcommand{\familydefault}{\rmdefault}
+\renewcommand*\rmdefault{cmr}
+% ptm: times 
+% cmr	Computer Modern Roman (default)
+
+% bibtex file path
+\newcommand{\bibpath}{bib}
+\input{defs.tex}
+% set the first page number  
+\firstpageno{1}
+
+\begin{document}
+
+\title{\LARGE
+Cat: A Simple   Template For Writing Manuscript
+}
+
+\author{
+\normalfont{Manu. by [Your Fancy Name]} \\
+% \texttt{xx@inf.ethz.ch}\\
+% \currenttime \; 
+%\texttt{ybian@inf.ethz.ch}\\
+%ETH Zurich\\
+\AND
+\normalfont{\large \today }
+}
+\maketitle
+
+\vspace{1em}
+
+\input{abs}
+
+%\begin{keywords}
+%
+%\end{keywords}
+
+
+% you can also add contents by uncommenting the following
+%\newpage 
+%{
+%\hypersetup{linkcolor=black}
+%\tableofcontents
+%}
+
+\input{intro}
+
+\input{algs}
+
+%
+\input{related}
+%
+\input{exp}
+
+\input{disc}
+
+
+
+% you can add acknowledgements here 
+\acks{the authors would like to xx }
+
+\clearpage
+%\section*{Ref}
+
+{
+%\small 
+\bibliography{\bibpath}
+}
+
+
+\appendix
+\appendixtitle{Appendix}
+\input{appendix}
+
+
+\end{document}
